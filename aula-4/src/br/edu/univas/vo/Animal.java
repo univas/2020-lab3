@@ -6,6 +6,10 @@ public class Animal {
 	private String cor;
 	private float peso;
 	
+	public String emiteSom() {
+		return null;
+	}
+	
 	public String getRaca() {
 		return raca;
 	}
