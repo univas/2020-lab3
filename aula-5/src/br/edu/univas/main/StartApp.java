@@ -13,11 +13,16 @@ public class StartApp {
 		ArrayList<Gato> listaGato = new ArrayList<>();
 		ArrayList<Animal> listaAnimais = new ArrayList<>();
 		
-		Cachorro c = new Cachorro();
+		Cachorro c = new Cachorro("Pintcher");
 		System.out.println(c.emiteSom());
 		c.comer();
+		c.setPeso(3.75f);
 		listaCachorro.add(c);
 		listaAnimais.add(c);
+		
+		Cachorro c2 = new Cachorro();
+		
+		Cachorro c3 = new Cachorro("Pintcher", 2.66f);
 		
 		Gato g = new Gato();
 		System.out.println(g.emiteSom());
