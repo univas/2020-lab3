@@ -7,7 +7,8 @@ public abstract class Conta {
 	private Cliente cliente;
 	
 	public Conta(int numero, Cliente cliente) { //constructor!
-		
+		this.numero = numero;
+		this.cliente = cliente; 
 	}
 	
 	public abstract boolean sacar(float valor);
