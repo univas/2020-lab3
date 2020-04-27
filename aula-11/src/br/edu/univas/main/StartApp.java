@@ -69,6 +69,17 @@ public class StartApp {
 			System.out.println("Esse CPF ja ta na lista!");
 		}
 		
+		int aa = 10;
+		int bb;
+		
+		if (aa > 5) {
+			bb = 20;
+		} else {
+			bb = 35;
+		}
+		
+		bb = aa > 5 ? 20 : 35;
+		
 		scanner.close();
 	}
 	
