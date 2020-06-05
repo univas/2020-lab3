@@ -1,5 +1,8 @@
 package br.edu.univas.main;
 
+import java.util.Scanner;
+
+import br.edu.univas.factory.ClienteFactory;
 import br.edu.univas.vo.Cliente;
 import br.edu.univas.vo.ClientePF;
 import br.edu.univas.vo.ClientePJ;
@@ -32,10 +35,46 @@ public class StartApp {
 		System.out.println(cliente4.comprimentar());
 		
 		
-		Cliente cliente5 = new ClientePF();
-		Cliente cliente6 = new ClientePJ();
+		Cliente cliente5 = new ClientePF(); //objeto ABCD
+		Cliente cliente6 = new ClientePJ(); //objeto XYZ
 //		ClientePF cliente7 = new Cliente(); -> não pode
 //		ClientePJ cliente8 = new Cliente(); -> não pode
+		
+		if (cliente4.autentica("inatel@gmail.com.br")) {
+			System.out.println("Autenticado!");
+		} else {
+			System.out.println("E-mail inválido!");
+		}
+		
+		cliente5 = cliente6;
+		//cliente5 agora aponta pro objeto XYZ
+		cliente6 = new ClientePF(); // objeto MNOP
+		
+		System.gc();
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("1 PF");
+		System.out.println("2 PJ");
+		System.out.println("Digite a opção: ");
+		int opcao = scanner.nextInt();
+		
+		
+		//ClienteFactory factory = new ClienteFactory();
+		//Cliente cliente = factory.getCliente(opcao);
+		
+		Cliente cliente = ClienteFactory.getCliente(opcao);
+		if (cliente == null) {
+			System.out.println("Opção invalida!");
+		}
+		
+//		if (opcao == 1) {
+//			cliente = new ClientePF();
+//		} else if (opcao == 2) {
+//			cliente = new ClientePJ();
+//		}
+		
+		//setar os dados do cliente
 		
 	}
 	

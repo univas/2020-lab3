@@ -3,7 +3,7 @@ package br.edu.univas.vo;
 public class ClientePF extends Cliente {
 
 	private int cpf;
-
+	
 	public int getCpf() {
 		return cpf;
 	}
@@ -19,8 +19,16 @@ public class ClientePF extends Cliente {
 
 	@Override
 	public boolean autentica(String email) {
-		// TODO Auto-generated method stub
-		return false;
+		return email.equals(getEmail());
+	}
+	
+	@Override
+	public boolean autenticaPorSms(int numeroTelefone) {
+		return numeroTelefone < 10;
+	}
+	
+	public int soma(int a, int b) {
+		return a + b;
 	}
 	
 }

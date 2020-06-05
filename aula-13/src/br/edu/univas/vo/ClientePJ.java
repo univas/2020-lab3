@@ -19,8 +19,7 @@ public class ClientePJ extends Cliente {
 
 	@Override
 	public boolean autentica(String email) {
-		// TODO Auto-generated method stub
-		return false;
+		return email.equals(getEmail()) || email.startsWith(getEmail()); 
 	}
 	
 }
