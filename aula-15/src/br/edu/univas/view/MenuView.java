@@ -6,8 +6,9 @@ public class MenuView {
 		System.out.println("\nCONTROLE DE GASTO COM CARTÃO\n");
 		System.out.println("1 - Cadastrar usuário");
 		System.out.println("2 - Logar");
-		System.out.println("3 - Cadastrar Gasto");
-		System.out.println("4 - Listar Gastos");
+		System.out.println("3 - Cadastrar Novo Cartão");
+		System.out.println("4 - Cadastrar Gasto");
+		System.out.println("5 - Listar Gastos");
 		System.out.println("9 - Sair");
 		System.out.print("\nPor favor, digite sua opção:");
 	}
