@@ -2,18 +2,17 @@ package br.edu.univas.vo;
 
 import java.util.Date;
 
-public class Aluno {
+public class Aluno extends Pessoa {
 
-	private String nome;
 	private int telefone;
 	private Date dataNascimento;
-
-	public String getNome() {
-		return nome;
+	
+	public Aluno() {
+		super();
 	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
+	
+	public Aluno(String nome) {
+		super(nome);
 	}
 
 	public int getTelefone() {
